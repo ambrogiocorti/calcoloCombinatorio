@@ -111,4 +111,5 @@ function calcola() {
     }
 
     ris.innerHTML = formula;
+
 }
