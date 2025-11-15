@@ -35,6 +35,18 @@ function calcola() {
     let parola = document.getElementById("parola").value.trim().toUpperCase();
     let ris = document.getElementById("ris");
 
+    if (document.getElementById("n").value === "" ||
+        document.getElementById("k").value === "") {
+        ris.innerHTML = `<span class='error'>Compila tutti i campi richiesti.</span>`;
+        return;
+    }
+
+    if (document.getElementById("parolaBox").style.display === "block" &&
+        parola.length === 0) {
+        ris.innerHTML = `<span class='error'>Inserisci la parola richiesta.</span>`;
+        return;
+    }
+
     if (n < 0 || k < 0) {
         ris.innerHTML = "Valori non validi";
         return;
@@ -111,5 +123,13 @@ function calcola() {
     }
 
     ris.innerHTML = formula;
-
 }
+
+document.addEventListener("click", e => {
+    if (e.target.classList.contains("info-icon")) {
+        e.target.classList.toggle("active");
+    } else {
+        document.querySelectorAll(".info-icon.active")
+                .forEach(i => i.classList.remove("active"));
+    }
+});
