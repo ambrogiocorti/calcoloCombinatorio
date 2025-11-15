@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <title>Calcolo Combinatorio</title>
@@ -22,7 +23,11 @@
                 <input type="checkbox" id="ordine" checked onclick="toggleParola()">
                 <span class="slider"></span>
             </label>
-            <div>Ordine importante</div>
+            <div class="label-with-info">
+                Ordine importante
+                <span class="info-icon" data-tooltip="Significa che cambia il risultato se si scambiano due elementi."></span>
+            </div>
+
         </div>
 
         <div class="toggle-row">
@@ -30,18 +35,30 @@
                 <input type="checkbox" id="rip" onclick="toggleParola()">
                 <span class="slider"></span>
             </label>
-            <div>Ripetizione</div>
+            <div class="label-with-info">
+                Ripetizione
+                <span class="info-icon" data-tooltip="Significa che gli elementi possono essere ripetuti più volte."></span>
+            </div>
+
         </div>
 
         <div class="grid">
             <div>
-                <label>n · numero oggetti</label>
+                <div class="label-with-info">
+                    <div class="label-n-k">n · numero oggetti</div>
+                    <span style="margin-right: 20px;" class="info-icon" data-tooltip="Indica il numero totale di oggetti disponibili."></span>
+                </div>
                 <input type="number" id="n" min="0" oninput="toggleParola()">
             </div>
+
             <div>
-                <label>k · posti / elementi</label>
+                <div class="label-with-info">
+                    <div class="label-n-k">k · posti</div>
+                    <span style="margin-right: 20px;" class="info-icon" data-tooltip="Indica quanti oggetti vengono scelti o ordinati."></span>
+                </div>
                 <input type="number" id="k" min="0" oninput="toggleParola()">
             </div>
+
         </div>
 
         <div id="parolaBox" style="display:none; margin-bottom:16px;">
@@ -58,6 +75,5 @@
 
     </div>
 </body>
-
 
 </html>
