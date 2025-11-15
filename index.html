@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolo Combinatorio</title>
+    <meta name="author" content="Ambrogio Corti">
+    <meta name="description" content="Calcolo combinatorio: permutazioni, disposizioni e combinazioni con/senza ripetizione.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="glow"></div>
+    <div class="card">
+        <h2 style="margin-bottom:12px;">Calcolo Combinatorio</h2>
+        <p style="color:var(--text-soft); margin-bottom:18px;"></p>
+
+        <div class="toggle-row">
+            <label class="switch">
+                <input type="checkbox" id="ordine" checked onclick="toggleParola()">
+                <span class="slider"></span>
+            </label>
+            <div>Ordine importante</div>
+        </div>
+
+        <div class="toggle-row">
+            <label class="switch">
+                <input type="checkbox" id="rip" onclick="toggleParola()">
+                <span class="slider"></span>
+            </label>
+            <div>Ripetizione</div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label>n · numero oggetti</label>
+                <input type="number" id="n" min="0" oninput="toggleParola()">
+            </div>
+            <div>
+                <label>k · posti / elementi</label>
+                <input type="number" id="k" min="0" oninput="toggleParola()">
+            </div>
+        </div>
+
+        <div id="parolaBox" style="display:none; margin-bottom:16px;">
+            <label>Parola</label>
+            <input type="text" id="parola" placeholder="Inserisci la parola" oninput="validaParola()">
+        </div>
+
+        <button onclick="calcola()">CALCOLA</button>
+
+        <div class="result-card" style="margin-top:18px;">
+            <div style="font-size:0.8rem; color:var(--text-soft); letter-spacing:0.16em;">RISULTATO</div>
+            <div id="ris" style="margin-top:6px;">Inserisci i dati.</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
