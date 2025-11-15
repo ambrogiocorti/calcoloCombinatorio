@@ -62,7 +62,7 @@ label {
     color: var(--text-soft);
 }
 
-.label-n-k{
+.label-n-k {
     margin-left: 15px;
     font-size: 0.9rem;
     letter-spacing: 0.14em;
@@ -97,11 +97,11 @@ button {
     box-shadow: 0 0 12px rgba(56, 189, 248, 0.45);
     overflow: hidden;
 }
-ì
-button:hover {
+
+ì button:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 18px rgba(56, 189, 248, 0.7),
-                0 0 32px rgba(99, 102, 241, 0.45);
+        0 0 32px rgba(99, 102, 241, 0.45);
 }
 
 button:active {
@@ -114,12 +114,10 @@ button::after {
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0.25) 0%,
-        rgba(255, 255, 255, 0.05) 40%,
-        rgba(255, 255, 255, 0) 60%
-    );
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.25) 0%,
+            rgba(255, 255, 255, 0.05) 40%,
+            rgba(255, 255, 255, 0) 60%);
     opacity: 0;
     transition: opacity 0.3s, transform 0.4s;
     transform: translateX(-120%);
@@ -250,6 +248,7 @@ button:hover::after {
     color: var(--text-main);
     z-index: 20;
     white-space: normal;
+    margin-right: 10px;
 }
 
 .info-icon:hover::after {
@@ -270,6 +269,7 @@ button:hover::after {
     }
 
     .label-with-info {
+
         font-size: 0.85rem;
     }
 
@@ -293,13 +293,14 @@ button:hover::after {
     }
 
     .info-icon::after {
-        right: unset;
-        left: 50%;
-        top: -10px;
-        transform: translate(-50%, -100%);
-        text-align: center;
+        left: unset;
+        right: 110%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
         max-width: 200px;
         white-space: normal;
+        margin-right: 10px;
     }
 }
 
@@ -313,6 +314,17 @@ button:hover::after {
     button {
         margin-top: 24px;
         font-size: 1.05rem;
+    }
+
+    .info-icon::after {
+        left: unset;
+        right: 110%;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        max-width: 200px;
+        white-space: normal;
+        margin-right: 10px;
     }
 }
 
